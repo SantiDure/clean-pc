@@ -14,14 +14,14 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgb(0, 0, 0, 0)),
     url(../img/background.jpg);
   min-height: 100vh;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: white;
 }
 #nav__container {
-  min-width: 100%;
-  width: fit-content;
+  width: 100%;
   color: white;
   display: flex;
   align-items: center;
@@ -201,11 +201,34 @@ form {
 
 .nosotros__placa-madre {
   width: 15rem;
+  border-radius: 10px;
 }
 
 .nosotros__info {
   display: flex;
   flex-direction: column;
+  padding: 1rem;
+}
+
+.nosotros__info h3 {
+  margin: 1rem 0 1rem 0;
+}
+/* Nosotros-grid */
+#nosotros__container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "info foto";
+  align-items: center;
+  justify-items: center;
+}
+
+.nosotros__info {
+  grid-area: info;
+}
+
+.nosotros__placa-madre {
+  grid-area: foto;
 }
 
 /* Experiencia */
@@ -227,7 +250,6 @@ form {
 /* Index */
 .index__title {
   padding: 1rem;
-  margin: 2rem;
   font-size: 2.5rem;
 }
 
@@ -293,4 +315,11 @@ form {
 .index__horarios {
   grid-area: horarios;
   justify-content: center;
+}
+
+/* MEDIA QUERYS */
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
 }
